@@ -1,0 +1,14 @@
+{
+  "raw": {
+    "Token_DB": 508,
+    "Group_DB": 50,
+    "Image_Map": 172,
+    "Model_DB": 11
+  },
+  "normalized": {
+    "options": 508,
+    "fields": 19,
+    "groups": 50,
+    "blocks": 11
+  }
+}

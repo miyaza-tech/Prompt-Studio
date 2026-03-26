@@ -1,0 +1,690 @@
+[
+  {
+    "option_value": "Pan Right ",
+    "image_url": "https://wolfcrow.com/wp-content/uploads/2021/03/58-The-Ehip-Pan-or-Swish-Pan-Movement.gif"
+  },
+  {
+    "option_value": "Pan Left",
+    "image_url": "https://wolfcrow.com/wp-content/uploads/2021/03/58-The-Ehip-Pan-or-Swish-Pan-Movement.gif"
+  },
+  {
+    "option_value": "Tilt Up ",
+    "image_url": "https://blog.kakaocdn.net/dna/c8ivFO/btqUuMA0d8m/AAAAAAAAAAAAAAAAAAAAAM8RMGgb-n3qvpfgxmNV-7dOLBugdpiMcX6r5_mWifCD/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=kD0nWm5eebJR7%2Fh9rmQa18Ks1Lw%3D"
+  },
+  {
+    "option_value": "Tilt Down ",
+    "image_url": "https://blog.kakaocdn.net/dna/8mE18/btqUsdzhY9u/AAAAAAAAAAAAAAAAAAAAANHCO0IjkzH7DPdrOHVo5fWjsBlBKYTBu0YfhRfiDZjk/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=T80oCM7q9FIjGOvIgLY9eTFE0zQ%3D"
+  },
+  {
+    "option_value": "Zoom Out ",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/641a832cd4167e73e6d2e927/1e085faf-4a41-40ad-90d2-3f00d24697b1/giphy%2B-%2B2023-03-29T224625.878.gif"
+  },
+  {
+    "option_value": "Zoom In ",
+    "image_url": "https://blog.kakaocdn.net/dna/zSzJG/btqUtp7gcho/AAAAAAAAAAAAAAAAAAAAAPh3g2D_eYGF8Vtfx4hVAjIeqJ65HnUjrmbz0j-yTHf8/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=s4Lt%2FbZhC2z1HKixk5bK8OXn7A0%3D"
+  },
+  {
+    "option_value": "Follow Shot ",
+    "image_url": "https://i.makeagif.com/media/9-28-2023/XWZjEF.gif"
+  },
+  {
+    "option_value": "Stationary Camera ",
+    "image_url": "https://blog.kakaocdn.net/dna/DPTx4/btqUvDcKcrS/AAAAAAAAAAAAAAAAAAAAAKRFBD8fRXbJNQQdb0jSumfTTPoEAszDLxBrVQqUQu3r/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=fWhGo64K1Y36e%2B%2BmMfJnuYOm2ZY%3D"
+  },
+  {
+    "option_value": "Handheld ",
+    "image_url": "https://i.makeagif.com/media/9-20-2023/rtZXrw.gif"
+  },
+  {
+    "option_value": "Dolly In ",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/641a832cd4167e73e6d2e927/2529fff2-c70e-46eb-b47c-53141aa507ab/Mar-26-2023%2B15-09-11.gif"
+  },
+  {
+    "option_value": "Dolly Out ",
+    "image_url": "https://blog.kakaocdn.net/dna/WtGsV/btqUvCY89bW/AAAAAAAAAAAAAAAAAAAAAF1lVBCUIWkEp1NeZt-XNQCBXMEaCR88JCqv7b0LZka7/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=dDHDhAKIxS0mRSwFw%2FzoWWxbfW8%3D"
+  },
+  {
+    "option_value": "Dolly Zoom ",
+    "image_url": "https://images.wondershare.com/filmora/article-trans-image/1101/dolly-zoom-filmora-2.gif"
+  },
+  {
+    "option_value": "Tracking Shot ",
+    "image_url": "https://blog.kakaocdn.net/dna/mHfgY/btqUuOes3YE/AAAAAAAAAAAAAAAAAAAAACO2AbZoLEcHoIduQFcLJyfKZ5dzRAcEYPxsPvH3wnqE/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=e30qMB2VctoIZxZPk%2BOpK%2BVXMew%3D"
+  },
+  {
+    "option_value": "Crane Shot ",
+    "image_url": "https://i.makeagif.com/media/1-11-2019/OI7jQn.gif"
+  },
+  {
+    "option_value": "Steadicam ",
+    "image_url": "https://pbblogassets.s3.amazonaws.com/uploads/2016/02/Tripod-Steadicam-2.gif"
+  },
+  {
+    "option_value": "Snorricam",
+    "image_url": "https://pbblogassets.s3.amazonaws.com/uploads/2016/02/Snorricam-Example-2_1.gif"
+  },
+  {
+    "option_value": "Low Angle Tracking ",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/5ca830051f4d7f0001a8f45f/826e130d-ab4e-4724-9e5d-8bef71d5424e/Ex_GrandBudapest-Trucking.gif"
+  },
+  {
+    "option_value": "Drone Flyover",
+    "image_url": "https://media.tenor.com/MRAO9DEaTLwAAAAM/drone-video-viral-hog.gif"
+  },
+  {
+    "option_value": "FPV Drone",
+    "image_url": "https://i.makeagif.com/media/1-05-2019/akyJ8x.gif"
+  },
+  {
+    "option_value": "Orbit Shot",
+    "image_url": "https://s.yimg.com/ny/api/res/1.2/hMar1DXzoPWqtQWtNjHfhw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MA--/https%3A//o.aolcdn.com/images/dar/5845cadfecd996e0372f/57df248c152fa6fdc16f409a8e061d7fa7c207d1/aHR0cDovL28uYW9sY2RuLmNvbS9oc3Mvc3RvcmFnZS9taWRhcy8xNjZhNDM1YjliZTNiNzY1NjZkYzFlN2QwMmQzMGZjZi8yMDU1NjU3ODkvSW5zdGEzNjAtdGVhc2VyLTIwMTcuZ2lm"
+  },
+  {
+    "option_value": "Arc Shot ",
+    "image_url": "https://miro.medium.com/1%2ArDqkY5m8QsMiV3TMT4qhXQ.gif"
+  },
+  {
+    "option_value": "Bullet Time",
+    "image_url": "https://media.tenor.com/AWziMzQk8VcAAAAM/dodge-neo.gif"
+  },
+  {
+    "option_value": "Hyperlapse",
+    "image_url": "https://pbblogassets.s3.amazonaws.com/uploads/2016/02/Hyperlapse-Demo-4.gif"
+  },
+  {
+    "option_value": "Camera Roll ",
+    "image_url": "https://substackcdn.com/image/fetch/%24s_%2188wu%21%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc6552724-1ab6-4335-af3c-094f3f399026_540x225.gif"
+  },
+  {
+    "option_value": "Whip Pan",
+    "image_url": "https://i.makeagif.com/media/6-14-2018/tKsIzh.gif"
+  },
+  {
+    "option_value": "Motion Blur",
+    "image_url": "https://www.shutterstock.com/image-photo/beautiful-motion-blur-people-walking-260nw-2316568279.jpg"
+  },
+  {
+    "option_value": "Speed Ramp",
+    "image_url": "https://i.makeagif.com/media/11-05-2023/25Kzh-.gif"
+  },
+  {
+    "option_value": "Slow Motion ",
+    "image_url": "https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyeWVqNWs3OXo1ejdoMzJoNXRrMW1qcnNoZ200NnF3cnVwajFtdDV2MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JoyVW5PNALEyCf9tkc/giphy.gif"
+  },
+  {
+    "option_value": "Film Grain ",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/106e5f86554483.60020cc8c84d0.gif"
+  },
+  {
+    "option_value": "Bloom",
+    "image_url": "https://colorfinale.com/stuff/posts/cf-bloom/1.jpg"
+  },
+  {
+    "option_value": "Light Leaks",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/5e3a31f4dfb7c008bff4aaa4/81446f8e-35c4-4357-93d9-420f43c129a8/00492843.jpg"
+  },
+  {
+    "option_value": "Haze",
+    "image_url": "https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUycTVjNTY1YnE0bXp3Z2l2ZWx1OXJueXQxcWxzM3pxZDd0N3h3Z2R3ayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2WjnOJMabobfmQ09jw/200.gif"
+  },
+  {
+    "option_value": "Halation ",
+    "image_url": "https://static.wixstatic.com/media/4506e3_1d1afc3b3c3c40a18610fe3c1a1a46ab~mv2.png/v1/fill/w_1813%2Ch_1079%2Cal_c/4506e3_1d1afc3b3c3c40a18610fe3c1a1a46ab~mv2.png"
+  },
+  {
+    "option_value": "Glitch",
+    "image_url": "https://media2.dev.to/dynamic/image/width%3D1280%2Cheight%3D720%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto/https%3A%2F%2Fthepracticaldev.s3.amazonaws.com%2Fi%2Fgpxc8u8fv2a2cwfgvo02.png"
+  },
+  {
+    "option_value": "Reflection",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/source/285e8c18796363.562d1c0223d65.gif"
+  },
+  {
+    "option_value": "Time-Lapse ",
+    "image_url": "https://i.makeagif.com/media/4-26-2016/8C4KrX.gif"
+  },
+  {
+    "option_value": "Hyperlapse",
+    "image_url": "https://i.pinimg.com/originals/b3/f2/54/b3f2544b8d88a187480d6f1b24a2a84d.gif"
+  },
+  {
+    "option_value": "Freeze Frame",
+    "image_url": "https://media.tenor.com/kfrSGAj5YnYAAAAM/new-girl-freeze.gif"
+  },
+  {
+    "option_value": "Split Screen",
+    "image_url": "https://i.makeagif.com/media/2-20-2017/ehmdAl.gif"
+  },
+  {
+    "option_value": "Lens Distortion",
+    "image_url": "https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyM3lzanZrbWE4OXJodXdidjNkM25jOG05Zm1ydHc3eThwbW54ZDMwMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jpieA5ceQLoBhSnz9q/giphy.gif"
+  },
+  {
+    "option_value": "Chromatic Aberration ",
+    "image_url": "https://cdn.dribbble.com/userupload/20018438/file/original-8b9e7e7171018db1c904239cd88d135b.gif"
+  },
+  {
+    "option_value": "Crash Zoom",
+    "image_url": "https://i.makeagif.com/media/6-23-2018/UNdVdR.gif"
+  },
+  {
+    "option_value": "Shockwave",
+    "image_url": "https://i.pinimg.com/originals/ee/f6/18/eef61848713fc1faf5100de08f97cea5.gif"
+  },
+  {
+    "option_value": "Muzzle Flash",
+    "image_url": "https://d3kjluh73b9h9o.cloudfront.net/original/4X/c/3/2/c326c47dd3b79a022f48288e442d90df138a333a.gif"
+  },
+  {
+    "option_value": "Debris & Particles",
+    "image_url": "https://images.openai.com/static-rsc-3/q_XNcZsjRpFnT4zD9jQrsVl3UnSn6viMq9rXdcJ-NGVrHOYJVQQYK8Kd-Nk0iWWTYLSZ0Ki4GxvuXeOCYn-QGbhVGaXcZtOh4VKYbzLthww?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Impact Frame",
+    "image_url": "https://i.makeagif.com/media/10-07-2023/gnSbR_.gif"
+  },
+  {
+    "option_value": "Motion Trail",
+    "image_url": "https://elevenpercent.net/cdn/shop/files/FINALTeleportEchoEffect.gif?v=1714336266&width=1445"
+  },
+  {
+    "option_value": "Mirror Multiply",
+    "image_url": "https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUydmZiMzV4MnZlNWJta2kzc2FsNW43cTU2MnBhem15ejZoaDhjbGF0eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3og0ITxZ3brrD07hra/200.gif"
+  },
+  {
+    "option_value": "Rack Focus",
+    "image_url": "https://jpvideopro.com/storage/app/uploads/public/5da/60b/284/5da60b2841145678342422.gif"
+  },
+  {
+    "option_value": "Fluid Dynamics",
+    "image_url": "https://miro.medium.com/v2/resize%3Afit%3A1200/1%2Ap_hiZfqRwN2AIgmGS1Cf6A.gif"
+  },
+  {
+    "option_value": "Cloth Simulation",
+    "image_url": "https://i.imgur.com/DB2W9Fz.gif"
+  },
+  {
+    "option_value": "Particle Effects",
+    "image_url": "https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyNDJkMzd0ajBsNHRxM3g4aDN0b2F2NDVybnlsYnMzYm5oc2NlaG5zcCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3xz2BRU6WpaxKiPzuE/giphy.gif"
+  },
+  {
+    "option_value": "First-Person POV",
+    "image_url": "https://media.tenor.com/XkIsgjPLwR8AAAAe/hospital-bed-pov.png"
+  },
+  {
+    "option_value": "Body Cam",
+    "image_url": "https://i.makeagif.com/media/6-25-2015/V9AOGq.gif"
+  },
+  {
+    "option_value": "Fixed Perspective",
+    "image_url": "https://i.makeagif.com/media/8-17-2021/ubg38S.gif"
+  },
+  {
+    "option_value": "Invisible Observer",
+    "image_url": "https://giggster.com/guide/static/809c7a9eb7b29bd708f1465afc922eb8/8299d/james-besser-139398-unsplash.jpg"
+  },
+  {
+    "option_value": "Depth Perspective",
+    "image_url": "https://wpja.s3.us-east-2.amazonaws.com/s3fs-public/wpja-contest-photos/contest-2439896/photo-2446516.jpg"
+  },
+  {
+    "option_value": "Vanishing Point",
+    "image_url": "https://shot.cafe/images/t/the-virgin-suicides-1999-207-7810.jpg"
+  },
+  {
+    "option_value": "Mirror Reflection",
+    "image_url": "https://64.media.tumblr.com/79a85963e29550c93593b2a297866e44/tumblr_inline_pr8uilJYZZ1qbycn1_500.png"
+  },
+  {
+    "option_value": "Through Window",
+    "image_url": "https://www.refinery29.com/images/10472637.jpg?crop=5%3A6&format=webp&height=864&quality=85&width=720"
+  },
+  {
+    "option_value": "Through Door",
+    "image_url": "https://images.huffingtonpost.com/2015-11-23-1448302924-3834633-the_searchers.jpg"
+  },
+  {
+    "option_value": "Underwater View",
+    "image_url": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147486350/images/4a432b-75a7-d1dc-e26-5b22e40254b_One_Breath.jpg"
+  },
+  {
+    "option_value": "Rule of Thirds",
+    "image_url": "https://assets.videomaker.com/2023/02/lake-03-3.jpg"
+  },
+  {
+    "option_value": "Center Framing",
+    "image_url": "https://www.cined.com/content/uploads/2025/02/symmetrical_shots-feature_2-1300x750.jpg"
+  },
+  {
+    "option_value": "Golden Ratio",
+    "image_url": "https://images.ctfassets.net/h6goo9gw1hh6/4yFzp4xMR4MpA2Qc3gSSok/46795692cad5d2014ea9df5e4f52ca1a/Golden-ratio-landscape.jpg?fl=progressive&fm=jpg&h=741&q=70&w=1200"
+  },
+  {
+    "option_value": "Leading Lines",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/61505c55c04b0a138b337894/1645391304895-7K7PBDQYOTPH0GZPBY3F/paths-as-leading-lines-3.jpg"
+  },
+  {
+    "option_value": "Frame within a Frame",
+    "image_url": "https://pbblogassets.s3.amazonaws.com/uploads/2016/01/Twilight-Zone-Mirror-Image.jpg"
+  },
+  {
+    "option_value": "Negative Space",
+    "image_url": "https://www.adobe.com/uk/creativecloud/photography/discover/media_149acfad3c4df14fe68be2709c73017e06dde05f6.jpg?format=pjpg&optimize=medium&width=1200"
+  },
+  {
+    "option_value": "Diagonal Composition",
+    "image_url": "https://i.pinimg.com/736x/1d/3b/a2/1d3ba2c6b95f57e562b5ba2e6b760b9d.jpg"
+  },
+  {
+    "option_value": "Symmetry",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/53a2b3a1e4b0a5020bebe676/1609758023077-LGHSER66YP6673SLP5PD/symmetry-photography-examples-12.jpg"
+  },
+  {
+    "option_value": "Asymmetry",
+    "image_url": "https://miro.medium.com/v2/resize%3Afit%3A1400/0%2AsMvI-2mkUAOY5ngx"
+  },
+  {
+    "option_value": "asymmetrical balance",
+    "image_url": "https://images.openai.com/static-rsc-3/ChWbFxp1_VtczcGkWdRHjR0uyToHHhOdvoMwOOQz4PMItrK4P2NYxT51ZDLDigEIicMv-aln6uiFOsgleh22NjVKJPjdBdSq3UG8OJEU3A8?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Quadrant Framing",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/592da2838419c251e72aaf23/045f93ff-e22b-426a-b131-8e8c6f823530/Quad_Frame_grid.JPG"
+  },
+  {
+    "option_value": "Foreground Interest",
+    "image_url": "https://cdn.prod.website-files.com/5f58a077d654db1a689fd95b/618d18fe129bd5203862a318_Foreground%20not%20working.jpg"
+  },
+  {
+    "option_value": "Background Emphasis",
+    "image_url": "https://store.bandccamera.com/cdn/shop/articles/what-is-emphasis-in-photography-129992.jpg?v=1659674929"
+  },
+  {
+    "option_value": "Depth Layering",
+    "image_url": "https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/49550/article_full%403x.jpg"
+  },
+  {
+    "option_value": "Triangular Composition",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/675176954189cc3a0d973e74/1733392344530-MF3EL3XB1CI6MD8AV3SJ/The%2BMona%2BLisa%2Bshowing%2Ba%2Btriangular%2Bcomposition"
+  },
+  {
+    "option_value": "Radial Composition",
+    "image_url": "https://photzy.com/assets/0-Cover-99-scaled.jpg"
+  },
+  {
+    "option_value": "Pattern Repetition",
+    "image_url": "https://1x.com/images/user/901d6f33abbc36076a68ea74d6e6150c-hd2.jpg"
+  },
+  {
+    "option_value": "Headroom",
+    "image_url": "https://www.cined.com/content/uploads/2023/07/headroom_in_storytelling-mr_robot_headroom_example.jpg"
+  },
+  {
+    "option_value": "Nose Room",
+    "image_url": "https://i.sstatic.net/hhK5y.png"
+  },
+  {
+    "option_value": "Portra 400 ",
+    "image_url": "https://images.openai.com/static-rsc-3/ASz2McC-fIpu-214j0eBOMaBMqKtK7j-A2azpfSTV5oQGasi6rY64qvW9DsgF5Pl5t_wcLvuKSCAUwOuRaZTtGLqwZr-l6DrEvVI7AE5jl4?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Ektar 100 ",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/646f841940703135a7dce9b8/1724060549009-7GPTT9ED8OM5PZV7WWYX/Kodak%2BEktar%2B100%2B-%2BFree%2BPreset.jpg"
+  },
+  {
+    "option_value": "Velvia 50",
+    "image_url": "https://www.danfletcher.com/content/images/2022/06/sharpened-Edit.jpg"
+  },
+  {
+    "option_value": "Tri-X 400 ",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/5852290a15d5db7317b3febd/1690067940550-K9TGKFY3E5TVBTO3XVDC/FilmEditsWithLeoCabal-3.jpg?format=2500w"
+  },
+  {
+    "option_value": "HP5 Plus",
+    "image_url": "https://i.shgcdn.com/7aa59d65-2369-4e5e-bd7c-43a664f5b81c/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+  },
+  {
+    "option_value": "CineStill 800T ",
+    "image_url": "https://cinestill.film/cdn/shop/articles/e-new_Andy_Sapp_800T_35mm_1024x1024.jpg?v=1739617072"
+  },
+  {
+    "option_value": "Polaroid ",
+    "image_url": "https://cdn.shopify.com/s/files/1/1135/7914/files/006002_c223107c-c398-40c0-b896-6c623f9fc505.png?v=1724924062"
+  },
+  {
+    "option_value": "Kodachrome ",
+    "image_url": "https://cdn.viewing.nyc/assets/media/2d29ac6ae2ca2b85485022566da3e571/elements/ee91e3489eb3d8a8b61be598926a06d7/xl/86c7699c-802d-47ff-889e-c56f4ea784b9_2x.jpg"
+  },
+  {
+    "option_value": "Fujicolor Pro ",
+    "image_url": "https://casualphotophile.com/2018/11/28/fujifilm-fujicolor-pro-400h-film-profile/fujifilm-fujicolor-pro-400h-samples-jeb-8/"
+  },
+  {
+    "option_value": "Ilford Delta ",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/545012a9e4b0988576f6b699/1614891766889-JQPGRXTRFVB652Z7LV34/A%2Bwoman%2Bwalks%2Bin%2Bdowntown%2BVancouver%2Bon%2Ba%2Bsunny%2BFebruary%2Bmorning.%2BIlford%2BDelta%2B100%2BSample%2Bphoto"
+  },
+  {
+    "option_value": "Bokeh",
+    "image_url": "https://images.openai.com/static-rsc-3/sYxbPRWTUKm6HDG0UiffgpT4my2Sfv6MXvBvM_4dXxc-uk4BmujryCyW7otTX5dbOgX6I8QFfmDP7KW9doGLO-pA6TZd7WfRWlwLigPz2DY?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Deep Focus",
+    "image_url": "https://77snszqv.media.zestyio.com/12-angry-cast.jpg"
+  },
+  {
+    "option_value": "Shallow DOF",
+    "image_url": "https://images.openai.com/static-rsc-3/4yLAf5zZ7tXKLVrXrCsDiCZvOctnweq5HUU9M8xqnl7NbYrr8zEkUVm2DdcZC8J20NMldIkFFzfCFFF0aTMEv-9nUFP0QP1cJbTBpMezmNo?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Rack Focus",
+    "image_url": "https://rubbrband-blog-bucket.s3.us-east-1.amazonaws.com/rack-focus/social_network_hero.webp"
+  },
+  {
+    "option_value": "Soft Focus",
+    "image_url": "https://png.pngtree.com/thumb_back/fw800/background/20251120/pngtree-dreamy-soft-focus-portrait-of-woman-with-flowers-image_20491937.webp"
+  },
+  {
+    "option_value": "Split Diopter",
+    "image_url": "https://pbblogassets.s3.amazonaws.com/uploads/2015/12/split-field-diopter-cover1.jpg"
+  },
+  {
+    "option_value": "Lens Flare",
+    "image_url": "https://images.openai.com/static-rsc-3/7tIo03rVMi2s-WLVG8PpDyzhSpaA7bv6iNh0Uc25EyAmb_TPE6D-ri48uIKDYpALvgDs9mmv4cQBnbKeI1XLZV0iOPEKDP7YAlHC7z2CQT4?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Vignette",
+    "image_url": "https://images.iphonephotographyschool.com/18170/1120/vignette.jpg"
+  },
+  {
+    "option_value": "Tilt-Shift Effect",
+    "image_url": "https://media.cnn.com/api/v1/images/stellar/prod/180327164050-jasper-leonard-15.jpg?q=w_1110%2Cc_fill"
+  },
+  {
+    "option_value": "Long Exposure",
+    "image_url": "https://images.openai.com/static-rsc-3/bLphJ0AARB-igd7jrH8cPiUL09SXsDp18nSTOhZuNIW7BIVu0sahonchTRM0tOR_jW5H6I0mZBXfv5PCdfCK-9kgHyLAIzLhXI7MbD12Quw?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Double Exposure",
+    "image_url": "https://images.openai.com/static-rsc-3/Lxy_fu5gguR0AbkK905Nz_pnpNWgQenOUWzfLiPDRvUaPIB_4ZV6us-PgeT1motAfcGn8W8ccbHJ52ANn_Rcr4f2LxoZvlHN-JoTTLgPmR0?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Soft Light",
+    "image_url": "https://pbblogassets.s3.amazonaws.com/uploads/2015/08/Soft-Lighting-Post.jpg"
+  },
+  {
+    "option_value": "Hard Light",
+    "image_url": "https://www.popphoto.com/uploads/2019/03/21/VUHNGANZJBT2ZJQROLVBEPAZC4.jpg?auto=webp"
+  },
+  {
+    "option_value": "Natural Light",
+    "image_url": "https://www.goodnet.org/photos/620x0/42119_hd.jpg"
+  },
+  {
+    "option_value": "Studio Light",
+    "image_url": "https://cdn.shopify.com/s/files/1/0527/9101/7671/files/colbor_257_x_2.jpg?v=1722335914"
+  },
+  {
+    "option_value": "Ambient Light",
+    "image_url": "https://cdn.prod.website-files.com/65c18a9a4d6c9699ac22d7bd/65c18a9a4d6c9699ac22e9a4_ambient-lighting-in-small-spaces-03.webp"
+  },
+  {
+    "option_value": "Spotlight",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/David_%26_Kim_%282010-09-17_by_Ian_T._McFarland%29.jpg"
+  },
+  {
+    "option_value": "High Key Lighting",
+    "image_url": "https://assets.videomaker.com/2020/09/Film-Lighting-Techniques-3-Point-Lighting-Restless.jpg"
+  },
+  {
+    "option_value": "Low Key Lighting",
+    "image_url": "https://images.openai.com/static-rsc-3/TvZNMyHHS8k1SCy8w-p-uUVhi7hUesNBFHFYSNc2Su5CnUtk91z2lbchd5mTdmkrCwJ-aC4SktqO5vT1xdeGe34t3FZ9w_hI5QvaqaQXujU?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Backlighting",
+    "image_url": "https://images.openai.com/static-rsc-3/2hrBhgw9txz8JBWs-Nnd3Ke1rawcGVDHAzqHaIxQAbTGTFjW2cIaobTBaEAjmbyYgaf7xfhNrfzUD5KUHFcnRa7zWwfvVxiBh7BNNxB96p8?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Key Lighting",
+    "image_url": "https://www.adobe.com/in/creativecloud/video/discover/media_1d54256a43c786c48d0f5ac13eb0d18525fce5b13.jpg?format=jpg&optimize=medium&width=750"
+  },
+  {
+    "option_value": "Fill Lighting",
+    "image_url": "https://qph.cf2.quoracdn.net/main-qimg-0b0ae3f76e6a3e5cd038455966e0b2ed-lq"
+  },
+  {
+    "option_value": "Diffused Light",
+    "image_url": "https://www.adobe.com/creativecloud/photography/technique/media_11419c924a1ca3e44404af2ce02d0a2ef8faceb85.png?format=png&optimize=medium&width=750"
+  },
+  {
+    "option_value": "Rembrandt Lighting",
+    "image_url": "https://cdn.shopify.com/s/files/1/0355/1805/files/create_rembrandt_lighting_600x600.jpg?v=1642273822"
+  },
+  {
+    "option_value": "Loop Lighting",
+    "image_url": "https://petapixel.com/assets/uploads/2023/03/loop-lighting-header-image-600x800.jpg"
+  },
+  {
+    "option_value": "Butterfly Lighting",
+    "image_url": "https://petapixel.com/assets/uploads/2023/01/butterfly-header-800x600.jpg"
+  },
+  {
+    "option_value": "Split Lighting",
+    "image_url": "https://i.pinimg.com/474x/d8/81/21/d881214f19c86fef35c9f07089a8fafb.jpg"
+  },
+  {
+    "option_value": "Broad Lighting",
+    "image_url": "https://www.ppa.com/assets/images/ppmag_articles/202310-14-PP-broad-E23A8256_retouched_highres.jpg"
+  },
+  {
+    "option_value": "Short Lighting",
+    "image_url": "https://openlab.citytech.cuny.edu/michalscomd2330fall2016/files/2016/10/IMG_0366.jpg"
+  },
+  {
+    "option_value": "Portrait Top Light",
+    "image_url": "https://yaffa-cdn.s3.amazonaws.com/yaffadsp/images/dmImage/StandardImage/portrait52.jpg"
+  },
+  {
+    "option_value": "Portrait Bottom Light",
+    "image_url": "https://i.pinimg.com/564x/2e/06/a6/2e06a694efb482cba54d21451b0c9f02.jpg"
+  },
+  {
+    "option_value": "Portrait Side Light",
+    "image_url": "https://images.openai.com/static-rsc-3/JnGBiLsLhGfOYOSdbxXaIkKXFoaQICT98Z6RcNUWt-yO_6Ve3ooUWWEWvuYbYaNcORN0DuiWoCnwFI-g5NNUqqFln4LZwg1ZZKRYdqQcSmg?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Portrait Back Light",
+    "image_url": "https://www.popphoto.com/uploads/2019/01/17/CY4FP7XWT6ZUK5VI3RUBW55ETI.jpg?auto=webp"
+  },
+  {
+    "option_value": "Portrait with Sunlight",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/54268a32e4b05b9e44ab1553/1529229635456-MOULPX9ZQO0EM4I8N6YR/model%2Bwith%2Blong%2Bdark%2Bhair"
+  },
+  {
+    "option_value": "Portrait Window Blinds",
+    "image_url": "https://i.pinimg.com/474x/24/a0/c7/24a0c7b2f8c8bce106fd4697293c1ad6.jpg"
+  },
+  {
+    "option_value": "Portrait Red Light",
+    "image_url": "https://images.openai.com/static-rsc-3/gAJBRLo-j2691kJK7Ev3jzcURCVj9yu_f-guF11ThYWmym_WNgjChYJD4sTOY9RnL7C50MXI1AbNyG24ohCaFyI0wo2Dr9GfNWc6sB6VK14?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Portrait Peach & Cyan",
+    "image_url": "https://cdn.prod.website-files.com/6629522db4ea3030cf8c4f53/66ae6e51fa7cadf9ae106e2f_Portrait_shot_with_peach_and_cyan_lighting_V61.jpeg"
+  },
+  {
+    "option_value": "Portrait Contrasty",
+    "image_url": "https://d28clw9klscyzj.cloudfront.net/legacy/assets/images/1065-1.jpg"
+  },
+  {
+    "option_value": "Portrait Bright",
+    "image_url": "https://assets.videomaker.com/2020/09/Film-Lighting-Techniques-3-Point-Lighting-Restless.jpg"
+  },
+  {
+    "option_value": "Portrait Natural",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/54268a32e4b05b9e44ab1553/1529229635456-MOULPX9ZQO0EM4I8N6YR/model%2Bwith%2Blong%2Bdark%2Bhair"
+  },
+  {
+    "option_value": "Portrait Dramatic",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_CsPHNKZTeS1CSq5hl_y2lFECweuDOwlVHQ&s"
+  },
+  {
+    "option_value": "Portrait Over Shoulder",
+    "image_url": "https://media.istockphoto.com/id/1388961870/photo/shot-of-a-beautiful-young-woman-posing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=Z40m9JE4jduGX6V9nUiXmY5f-Yt_2vPSho3z1RNclw0="
+  },
+  {
+    "option_value": "Cinematic Lighting",
+    "image_url": "https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/52773/article_featured%403x.jpg"
+  },
+  {
+    "option_value": "Rim Light",
+    "image_url": "https://images.openai.com/static-rsc-3/rlb_gwwYfRqIJrs2NNsZ9FvK2k5FTaI1wefG5mxN-LYYbQ8F4GRbdBTEwxfW8cGo45KDGXEHVWfXbpdBr1qhbARNvQ0xYRFPq8n2lO-JJ7Y?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Chiaroscuro",
+    "image_url": "https://shotkit.com/wp-content/uploads/2020/09/chiaro-2-3.jpg"
+  },
+  {
+    "option_value": "Motivated Lighting",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/5265ba6ae4b09e5c3d8b5221/1514909167997-XSTGXHQFMYAQ46KPQ0LH/Vintage%2BPortrait%2Bof%2Ba%2BMoto%2BRider%2Bwith%2BAaron%2BAnderson"
+  },
+  {
+    "option_value": "Volumetric Lighting",
+    "image_url": "https://images.openai.com/static-rsc-3/2D9U6yizf5pFw2w6mNMtQ9x7C3yixb7y9O7hwNpGKBWrEik5b7sBhNzWXcs1KLCenMEp5cARmX7gtZqEC-Jz1jPBzceyO9TCiOzKil5C3WA?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Silhouette Lighting",
+    "image_url": "https://bbs.oppo.com/upload/image/front/thread/20250519/6940163500475857721/1863681845627977737/1863681845627977737.jpg"
+  },
+  {
+    "option_value": "Strobe Lighting",
+    "image_url": "https://cdn.shopify.com/s/files/1/0225/2960/5706/files/Strobe_Lights_Uses_480x480.jpg?v=1734948389"
+  },
+  {
+    "option_value": "Pattern Light",
+    "image_url": "https://us.images.westend61.de/0001488430j/window-blinds-shadow-on-woman-face-looking-away-standing-at-cafe-JCCMF00043.jpg"
+  },
+  {
+    "option_value": "Golden Hour",
+    "image_url": "https://www.befunky.com/images/wp/wp-2022-08-GoldenHourFeatured-2.jpg?auto=avif%2Cwebp&crop=16%3A9&format=jpg&width=1136"
+  },
+  {
+    "option_value": "Blue Hour",
+    "image_url": "https://images.openai.com/static-rsc-3/4635U13zQibtdPfSWsbFPel7c1UcSs9VWjTeg0E1jR4rPUqIjwPTcX7MpBtnA6zGjBuYPtHRR2gYrUA8SE6id8A5vXXoYE02dOSJmt48MkA?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Window Light",
+    "image_url": "https://www.befunky.com/images/wp/wp-2022-05-window-light-portrait-3-copy.jpg?auto=avif%2Cwebp&format=jpg&width=944"
+  },
+  {
+    "option_value": "Dawn Lighting",
+    "image_url": "https://www.austockphoto.com.au/imgcache/uploads/photos/compressed/mist-rising-over-water-in-early-morning-light-austockphoto-000124443.JPG"
+  },
+  {
+    "option_value": "Sunset Lighting",
+    "image_url": "https://www.digitalphotomentor.com/photography/2023/04/bluehour-sunset-portraits-06-750px-jpg.webp"
+  },
+  {
+    "option_value": "Dusk Lighting",
+    "image_url": "https://www.paclights.com/wp-content/uploads/image-6556.jpg"
+  },
+  {
+    "option_value": "Overcast Light",
+    "image_url": "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2021/04/overcast-day-portrait-reflector-2.jpg?fit=1500%2C1001&ssl=1"
+  },
+  {
+    "option_value": "Dappled Light",
+    "image_url": "https://i.pinimg.com/736x/fd/e6/b7/fde6b7afc8836e1aa4fe1b216865f23b.jpg"
+  },
+  {
+    "option_value": "Crepuscular Rays",
+    "image_url": "https://images.openai.com/static-rsc-3/BlzCcTB9XdI3l5CSSh6j6Ci3xz5zDwnzWa7FSL7IGGfEGajjQ60ykRdxnsR5yKeOOovfyFUtPEW8JvJzFKGRw0m215ZDPMu7xmPV6eTdVy8?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Moonlight",
+    "image_url": "https://www.creativeislandphoto.com/uploads/1/0/5/1/10515211/on-the-rocks_orig.jpg"
+  },
+  {
+    "option_value": "Sunlight Through",
+    "image_url": "https://png.pngtree.com/thumb_back/fw800/background/20251128/pngtree-sunlight-streams-through-a-dusty-window-with-sheer-curtains-blowing-gently-image_20431588.webp"
+  },
+  {
+    "option_value": "Gel Lighting",
+    "image_url": "https://i.pinimg.com/originals/f6/e0/52/f6e05262b4210a52c20acb656e30fc11.jpg"
+  },
+  {
+    "option_value": "Practical Lighting",
+    "image_url": "https://nofilmschool.com/media-library/skyfall-deakins-practical-light-example.jpg?coordinates=0%2C0%2C43%2C0&height=700&id=34085643&quality=50&width=1245"
+  },
+  {
+    "option_value": "Midnight Lighting",
+    "image_url": "https://77snszqv.media.zestyio.com/Screenshot-1.jpg"
+  },
+  {
+    "option_value": "Candlelight",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/8zrMewAQ8YMCCHRTYhMgCR-1200-80.jpg"
+  },
+  {
+    "option_value": "Neon Light",
+    "image_url": "https://images.openai.com/static-rsc-3/2iWgCQWob8j_giNAmwbw3G1hw0_ziCUO808VXDICiHLpUWfgddZ161GQu0OqOJpDARUZHKlYTRj6omPIHalYldqFcDmbZbG_7QCZqljArT4?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Street Light",
+    "image_url": "https://p2.piqsels.com/preview/1009/716/975/street-light-crossing-street-lamp.jpg"
+  },
+  {
+    "option_value": "Fluorescent Light",
+    "image_url": "https://img.cuppa.ai/content-gen/1Bi1Wyqiklb3KRumB2Vzh.webp"
+  },
+  {
+    "option_value": "Laser Lighting",
+    "image_url": "https://cdn.nwe.io/files/x/84/9d/323e432996ee627f05a9a93d9e20.jpg"
+  },
+  {
+    "option_value": "Twilight Light",
+    "image_url": "https://www.researchgate.net/publication/10915600/figure/fig1/AS%3A11431281293309792%401732819728818/Photograph-of-an-ordinary-purple-light-taken-during-evening-twilight-at-Chesapeake-Beach.jpg"
+  },
+  {
+    "option_value": "Cross Lighting",
+    "image_url": "https://i.pinimg.com/736x/c1/70/74/c170743d349017f15b8ae538ea704649.jpg"
+  },
+  {
+    "option_value": "Bounced Light",
+    "image_url": "https://artlist.io/blog/wp-content/uploads/2022/01/54e16e401a86b365a0724f5317621a4f6d3bccbf.jpg"
+  },
+  {
+    "option_value": "Accent Lighting",
+    "image_url": "https://www.picturecorrect.com/wp-content/uploads/2013/08/portrait-accent-light-1.jpg"
+  },
+  {
+    "option_value": "Softbox Lighting",
+    "image_url": "https://cdn.shopify.com/s/files/1/2303/2711/files/10-benefits-of-using-a-professional-softbox-studio-lighting-kit-10_4191bf15-7514-4311-9b05-a7370b253e59.jpg?v=1587536059"
+  },
+  {
+    "option_value": "Flash Lighting",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/55906ce2e4b0ddd631942102/12dc3f38-fb86-433f-94d2-7a373ab68228/Boston%2BWedding%2BPhotographer-1.jpg"
+  },
+  {
+    "option_value": "Long Exposure Light",
+    "image_url": "https://images.openai.com/static-rsc-3/TK6YllEykJj-IX7m6zeH-ArGQkDpKWBZ9Irl9GxYX50115DXJ6zFUdceHTlMLTWEk08FSvVjn9Lr_mevfjoamqccFgDN1GBY9tfOidFtFh8?purpose=fullsize&v=1"
+  },
+  {
+    "option_value": "Incandescent",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUR09gYLsig7Tm9Pyh7coCdGdAUyQc82vbfg&s"
+  },
+  {
+    "option_value": "Moody Lighting",
+    "image_url": "https://cdn.pixabay.com/photo/2015/04/12/18/05/moody-719227_1280.jpg"
+  },
+  {
+    "option_value": "Ethereal Lighting",
+    "image_url": "https://images.stockcake.com/public/d/c/1/dc1c6174-7bd5-47b7-a1bf-a77fde0155a2_large/ethereal-light-portrait-stockcake.jpg"
+  },
+  {
+    "option_value": "Radiosity",
+    "image_url": "https://usa-forum.d5cdn.com/original/2X/4/4bb00bf44133bd8fbbb2a0cf50bb8066696a18e3.png"
+  },
+  {
+    "option_value": "Contre-jour",
+    "image_url": "https://www.cined.com/content/uploads/2025/03/backlight_in_film-feature_image.jpg"
+  }
+]

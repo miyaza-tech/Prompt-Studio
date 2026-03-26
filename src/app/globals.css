@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables — Light Mode */
+:root {
+  --background: #f5f5f5;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --primary: #525252;
+  --primary-foreground: #ffffff;
+  --secondary: #ebebeb;
+  --secondary-foreground: #171717;
+  --muted: #ebebeb;
+  --muted-foreground: #737373;
+  --accent: #e5e5e5;
+  --accent-foreground: #171717;
+  --border: #d4d4d4;
+  --ring: #525252;
+}
+
+.dark {
+  /* Background colors */
+  --background: #1e1e1e;
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-tertiary: #2d2d30;
+  --bg-card: #252526;
+  --bg-input: #373737;
+
+  /* Text colors */
+  --foreground: #d4d4d4;
+  --text-primary: #d4d4d4;
+  --text-secondary: #9d9d9d;
+  --text-muted: #6d6d6d;
+
+  /* Border colors */
+  --border: #2d2d30;
+  --border-light: #3c3c3c;
+
+  /* Accent colors */
+  --accent-primary: #d4d4d4;
+  --gradient-main: linear-gradient(135deg, #6d6d6d 0%, #4d4d4d 100%);
+
+  /* Mapped variables */
+  --card: #252526;
+  --card-foreground: #d4d4d4;
+  --primary: #d4d4d4;
+  --primary-foreground: #1e1e1e;
+  --secondary: #2d2d30;
+  --secondary-foreground: #d4d4d4;
+  --muted: #252526;
+  --muted-foreground: #9d9d9d;
+  --accent: #2d2d30;
+  --accent-foreground: #d4d4d4;
+  --ring: #6d6d6d;
+}
+
+/* Base styles */
+html {
+  font-family: 'Inter', 'Pretendard', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Input/Textarea styles for light mode */
+input,
+textarea,
+select {
+  border-color: #d4d4d4 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #a3a3a3 !important;
+}
+
+/* Input/Textarea styles for dark mode */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #373737 !important;
+  color: var(--text-primary);
+  border-color: #2d2d30 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+/* Token chip styles - Light mode */
+.token-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #525252;
+  border: 1px solid #d4d4d4;
+  transition: all 0.15s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.token-chip:hover {
+  background-color: #f0f0f0;
+  border-color: #a3a3a3;
+}
+
+.token-chip.selected {
+  background-color: #9ca3af;
+  color: #ffffff;
+  border-color: #9ca3af;
+}
+
+/* Token chip styles - Dark mode */
+.dark .token-chip {
+  background-color: rgba(45, 45, 48, 0.5);
+  color: #d4d4d4;
+  border-color: #2d2d30;
+}
+
+.dark .token-chip:hover {
+  background-color: rgba(60, 60, 60, 0.5);
+  border-color: #3c3c3c;
+}
+
+.dark .token-chip.selected {
+  background-color: #d4d4d4;
+  color: #1e1e1e;
+  border-color: #d4d4d4;
+}
+
+.token-chip.negative {
+  background-color: rgb(239 68 68 / 0.1);
+  color: #dc2626;
+  border-color: rgb(239 68 68 / 0.2);
+}
+
+.token-chip.negative:hover {
+  background-color: rgb(239 68 68 / 0.2);
+  border-color: rgb(239 68 68 / 0.4);
+}
+
+.token-chip.negative.selected {
+  background-color: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+/* Option card styles - Light mode */
+.option-card {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d4d4d4;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.option-card:hover {
+  border-color: #a3a3a3;
+  background-color: #f0f0f0;
+}
+
+.option-card.selected {
+  border-color: #525252;
+  background-color: rgba(82, 82, 82, 0.1);
+}
+
+/* Option card styles - Dark mode */
+.dark .option-card {
+  border-color: #2d2d30;
+}
+
+.dark .option-card:hover {
+  border-color: #3c3c3c;
+  background-color: rgba(45, 45, 48, 0.3);
+}
+
+.dark .option-card.selected {
+  border-color: #d4d4d4;
+  background-color: rgba(212, 212, 212, 0.15);
+}
+
+/* Category accordion */
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.category-header:hover {
+  background-color: #e5e5e5;
+}
+
+.dark .category-header:hover {
+  background-color: rgba(45, 45, 48, 0.5);
+}
+
+/* Prompt preview */
+.prompt-preview {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #e5e5e5;
+  border: 1px solid var(--border);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.dark .prompt-preview {
+  background-color: #252526;
+  border-color: #3c3c3c;
+}
+
+/* Slider track */
+.slider-track {
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #d4d4d4;
+}
+
+.slider-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #6d6d6d;
+}
+
+.slider-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background-color: #d4d4d4;
+  border: 2px solid #1e1e1e;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+.slider-thumb:active {
+  cursor: grabbing;
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.2s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.15s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Drag and drop styles */
+.dragging {
+  opacity: 0.5;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.drag-over {
+  outline: 2px solid #6d6d6d;
+  outline-offset: 2px;
+}

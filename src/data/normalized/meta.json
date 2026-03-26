@@ -1,0 +1,145 @@
+{
+  "aspect_ratios": [
+    {
+      "value": "1:1",
+      "label": "1:1"
+    },
+    {
+      "value": "4:3",
+      "label": "4:3"
+    },
+    {
+      "value": "3:4",
+      "label": "3:4"
+    },
+    {
+      "value": "16:9",
+      "label": "16:9"
+    },
+    {
+      "value": "9:16",
+      "label": "9:16"
+    },
+    {
+      "value": "3:2",
+      "label": "3:2"
+    },
+    {
+      "value": "2:3",
+      "label": "2:3"
+    },
+    {
+      "value": "21:9",
+      "label": "21:9"
+    }
+  ],
+  "stylize_range": {
+    "min": 0,
+    "max": 1000,
+    "default": 100,
+    "step": 1
+  },
+  "chaos_range": {
+    "min": 0,
+    "max": 100,
+    "default": 0,
+    "step": 1
+  },
+  "fps_options": [
+    12,
+    15,
+    24,
+    30,
+    60
+  ],
+  "duration_range": {
+    "min": 2,
+    "max": 16,
+    "default": 4,
+    "unit": "seconds"
+  },
+  "motion_range": {
+    "min": 1,
+    "max": 5,
+    "default": 3
+  },
+  "versions": [
+    {
+      "value": "8",
+      "label": "v8"
+    },
+    {
+      "value": "7",
+      "label": "v7"
+    },
+    {
+      "value": "6.1",
+      "label": "v6.1"
+    },
+    {
+      "value": "6",
+      "label": "v6"
+    },
+    {
+      "value": "5.2",
+      "label": "v5.2"
+    },
+    {
+      "value": "niji",
+      "label": "Niji v7"
+    },
+    {
+      "value": "niji 6",
+      "label": "Niji 6"
+    },
+    {
+      "value": "niji 5",
+      "label": "Niji 5"
+    },
+    {
+      "value": "niji 4",
+      "label": "Niji 4"
+    }
+  ],
+  "image_weight_range": {
+    "min": 0,
+    "max": 2,
+    "default": 1,
+    "step": 0.1
+  },
+  "style_weight_range": {
+    "min": 0,
+    "max": 1000,
+    "default": 100,
+    "step": 1
+  },
+  "character_weight_range": {
+    "min": 0,
+    "max": 100,
+    "default": 0,
+    "step": 1
+  },
+  "weird_range": {
+    "min": 0,
+    "max": 3000,
+    "default": 0,
+    "step": 1
+  },
+  "exp_range": {
+    "min": 0,
+    "max": 100,
+    "default": 0,
+    "step": 1
+  },
+  "default_negative_prompts": [
+    "ugly",
+    "blurry",
+    "low quality",
+    "deformed",
+    "bad anatomy",
+    "watermark",
+    "text",
+    "signature"
+  ],
+  "max_ref_codes": 3
+}

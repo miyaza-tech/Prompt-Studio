@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+
+# Environment variables (API keys)
+.env.local
+.env.*.local
+
+# Debug
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Excel data files
+*.xlsx
+*.xls
+
+# Python
+.venv/
+__pycache__/
+*.pyc
