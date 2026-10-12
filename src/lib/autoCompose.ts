@@ -31,6 +31,21 @@ export const DEFAULT_AI_SETTINGS: AiSettings = {
 export const CLAUDE_MODEL_SUGGESTIONS = ['claude-opus-5-5', 'claude-sonnet-5-5', 'claude-haiku-5-5'];
 export const OPENAI_MODEL_SUGGESTIONS = ['gpt-5.5', 'gpt-5.5-pro', 'gpt-5.4-mini', 'gpt-6.1-sol'];
 
+/**
+ * Reject values that don't look like an API key — e.g. a site password the
+ * browser autofilled — so they are never sent to the provider.
+ */
+export function getKeyFormatError(provider: AiProvider, key: string): string | null {
+  if (!key) return null;
+  if (provider === 'claude' && !/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(key)) {
+    return 'Anthropic API 키 형식이 아닙니다 (sk-ant-로 시작). 브라우저가 저장된 비밀번호를 채웠을 수 있으니 지우고 다시 입력해 주세요.';
+  }
+  if (provider === 'openai' && !/^sk-[A-Za-z0-9_-]{20,}$/.test(key)) {
+    return 'OpenAI API 키 형식이 아닙니다 (sk-로 시작). 브라우저가 저장된 비밀번호를 채웠을 수 있으니 지우고 다시 입력해 주세요.';
+  }
+  return null;
+}
+
 export interface AutoComposeResult {
   options: Option[];
   summary: string;
@@ -207,6 +222,10 @@ export async function autoCompose(
   options: Option[],
   groups: Group[],
 ): Promise<AutoComposeResult> {
+  const key = settings.provider === 'claude' ? settings.claudeKey : settings.openaiKey;
+  const keyError = getKeyFormatError(settings.provider, key);
+  if (keyError) throw new Error(keyError);
+
   const { catalogText, aliasToOption } = buildCatalog(options, groups);
   const raw =
     settings.provider === 'claude'

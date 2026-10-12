@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import { Sparkles, Settings, Loader2, X as XIcon } from 'lucide-react';
+import { useState, type CSSProperties } from 'react';
+import { Sparkles, Settings, Loader2, X as XIcon, Eye, EyeOff, Trash2 } from 'lucide-react';
 import { usePromptStore } from '@/store/promptStore';
 import {
   autoCompose,
+  getKeyFormatError,
   CLAUDE_MODEL_SUGGESTIONS,
   OPENAI_MODEL_SUGGESTIONS,
   type AiProvider,
@@ -28,7 +29,7 @@ export default function AutoCompose({ text }: { text: string }) {
   const activeModel = aiSettings.provider === 'claude' ? aiSettings.claudeModel : aiSettings.openaiModel;
 
   const handleCompose = async () => {
-    if (!activeKey) {
+    if (!activeKey || getKeyFormatError(aiSettings.provider, activeKey)) {
       setSettingsOpen(true);
       return;
     }
@@ -83,7 +84,10 @@ export default function AutoCompose({ text }: { text: string }) {
 
 function AiSettingsDialog({ onClose }: { onClose: () => void }) {
   const { aiSettings, setAiSettings } = usePromptStore();
+  const [showKey, setShowKey] = useState(false);
   const isClaude = aiSettings.provider === 'claude';
+  const currentKey = isClaude ? aiSettings.claudeKey : aiSettings.openaiKey;
+  const keyFormatError = getKeyFormatError(aiSettings.provider, currentKey);
 
   return (
     <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/50" onMouseDown={onClose}>
@@ -118,14 +122,45 @@ function AiSettingsDialog({ onClose }: { onClose: () => void }) {
         <label className="text-[11px] text-muted-foreground block mb-1">
           {isClaude ? 'Anthropic API 키' : 'OpenAI API 키'}
         </label>
-        <input
-          type="password"
-          autoComplete="off"
-          value={isClaude ? aiSettings.claudeKey : aiSettings.openaiKey}
-          onChange={(e) => setAiSettings(isClaude ? { claudeKey: e.target.value.trim() } : { openaiKey: e.target.value.trim() })}
-          placeholder={isClaude ? 'sk-ant-...' : 'sk-...'}
-          className="w-full mb-3 px-2 py-1.5 rounded border border-border bg-background text-xs focus:outline-none focus:ring-1 focus:ring-primary/50"
-        />
+        <div className="flex gap-1 mb-1">
+          {/* type="text" + CSS masking: browsers ignore autocomplete="off" on password
+              fields and may autofill a saved site password, which would then be sent as the key */}
+          <input
+            type="text"
+            name={isClaude ? 'ps-anthropic-key' : 'ps-openai-key'}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            data-1p-ignore
+            data-lpignore="true"
+            data-bwignore
+            data-form-type="other"
+            value={currentKey}
+            onChange={(e) => setAiSettings(isClaude ? { claudeKey: e.target.value.trim() } : { openaiKey: e.target.value.trim() })}
+            placeholder={isClaude ? 'sk-ant-...' : 'sk-...'}
+            style={showKey ? undefined : ({ WebkitTextSecurity: 'disc' } as CSSProperties)}
+            className="flex-1 min-w-0 px-2 py-1.5 rounded border border-border bg-background text-xs focus:outline-none focus:ring-1 focus:ring-primary/50"
+          />
+          <button
+            onClick={() => setShowKey(!showKey)}
+            title={showKey ? '키 가리기' : '키 보기'}
+            className="px-1.5 rounded border border-border text-muted-foreground hover:bg-muted/50 transition-colors"
+          >
+            {showKey ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+          </button>
+          <button
+            onClick={() => setAiSettings(isClaude ? { claudeKey: '' } : { openaiKey: '' })}
+            disabled={!currentKey}
+            title="키 지우기"
+            className="px-1.5 rounded border border-border text-muted-foreground hover:text-red-500 hover:bg-muted/50 transition-colors disabled:opacity-40"
+          >
+            <Trash2 className="w-3.5 h-3.5" />
+          </button>
+        </div>
+        {keyFormatError
+          ? <p className="mb-3 text-[10px] text-red-500">{keyFormatError}</p>
+          : <div className="mb-3" />}
 
         <label className="text-[11px] text-muted-foreground block mb-1">모델</label>
         <input
