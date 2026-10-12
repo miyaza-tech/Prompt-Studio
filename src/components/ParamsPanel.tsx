@@ -45,6 +45,8 @@ export default function ParamsPanel() {
     characterFields,
     paramsActiveTab,
     setParamsActiveTab,
+    structuredAspectRatio,
+    setStructuredAspectRatio,
   } = usePromptStore();
 
   const model = getSelectedModel();
@@ -106,33 +108,11 @@ export default function ParamsPanel() {
           <div className="space-y-4">
             {/* Aspect Ratio */}
             <ParamSection title="Aspect Ratio">
-              <div className="flex flex-wrap gap-1.5">
-                {meta.aspect_ratios.map((ar) => {
-                  const [w, h] = ar.value.split(':').map(Number);
-                  const maxDim = 12;
-                  const scale = maxDim / Math.max(w, h);
-                  const iconW = Math.round(w * scale);
-                  const iconH = Math.round(h * scale);
-                  const isSelected = promptParams.ar === ar.value;
-                  return (
-                    <button
-                      key={ar.value}
-                      onClick={() => setParam('ar', ar.value)}
-                      className={`flex flex-col items-center gap-1 px-2 py-1.5 rounded border text-xs font-medium transition-colors min-w-[40px]
-                        ${isSelected
-                          ? 'bg-primary/20 border-primary text-primary'
-                          : 'bg-background border-border text-muted-foreground hover:border-primary/50'
-                        }`}
-                    >
-                      <div
-                        className={`rounded-[2px] border-[1.5px] ${isSelected ? 'border-primary' : 'border-muted-foreground/50'}`}
-                        style={{ width: iconW, height: iconH }}
-                      />
-                      <span className="text-[10px] leading-none">{ar.label}</span>
-                    </button>
-                  );
-                })}
-              </div>
+              <AspectRatioPicker
+                ratios={meta.aspect_ratios}
+                value={promptParams.ar}
+                onChange={(ar) => setParam('ar', ar)}
+              />
             </ParamSection>
 
             {/* Aesthetics */}
@@ -302,6 +282,29 @@ export default function ParamsPanel() {
             characterFields={characterFields}
           />
         )}
+
+        {activeTab === 'structured' && (
+          <div className="pt-2.5 mt-1 border-t border-border/50">
+            <div className="flex items-center justify-between mb-1.5">
+              <span className="text-[11px] font-semibold text-primary">[Aspect Ratio]</span>
+              {structuredAspectRatio && (
+                <button
+                  onClick={() => setStructuredAspectRatio(null)}
+                  className="p-0.5 text-muted-foreground hover:text-red-500 transition-colors"
+                  title="선택 해제"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+            <AspectRatioPicker
+              ratios={meta.aspect_ratios}
+              value={structuredAspectRatio}
+              // Clicking the selected ratio again clears it
+              onChange={(ar) => setStructuredAspectRatio(structuredAspectRatio === ar ? null : ar)}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -323,6 +326,44 @@ function ParamRow({ label, children }: { label: string; children: ReactNode }) {
     <div className="flex items-center gap-2">
       <span className="text-[11px] text-muted-foreground w-28 shrink-0 leading-tight">{label}</span>
       <div className="flex-1 min-w-0">{children}</div>
+    </div>
+  );
+}
+
+interface AspectRatioPickerProps {
+  ratios: { value: string; label: string }[];
+  value: string | null | undefined;
+  onChange: (value: string) => void;
+}
+
+function AspectRatioPicker({ ratios, value, onChange }: AspectRatioPickerProps) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {ratios.map((ar) => {
+        const [w, h] = ar.value.split(':').map(Number);
+        const maxDim = 12;
+        const scale = maxDim / Math.max(w, h);
+        const iconW = Math.round(w * scale);
+        const iconH = Math.round(h * scale);
+        const isSelected = value === ar.value;
+        return (
+          <button
+            key={ar.value}
+            onClick={() => onChange(ar.value)}
+            className={`flex flex-col items-center gap-1 px-2 py-1.5 rounded border text-xs font-medium transition-colors min-w-[40px]
+              ${isSelected
+                ? 'bg-primary/20 border-primary text-primary'
+                : 'bg-background border-border text-muted-foreground hover:border-primary/50'
+              }`}
+          >
+            <div
+              className={`rounded-[2px] border-[1.5px] ${isSelected ? 'border-primary' : 'border-muted-foreground/50'}`}
+              style={{ width: iconW, height: iconH }}
+            />
+            <span className="text-[10px] leading-none">{ar.label}</span>
+          </button>
+        );
+      })}
     </div>
   );
 }

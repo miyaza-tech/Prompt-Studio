@@ -3,6 +3,7 @@
 import { useMemo, useEffect } from 'react';
 import { Type, User, Palette } from 'lucide-react';
 import { usePromptStore } from '@/store/promptStore';
+import AutoCompose from '@/components/AutoCompose';
 
 // Special category ID for reference codes
 export const REFCODE_CATEGORY_ID = '__refcode__';
@@ -142,6 +143,12 @@ export default function CategoryNavPanel() {
             rows={2}
           />
         )}
+
+        <AutoCompose
+          text={characterMode
+            ? Object.values(characterFields).filter(Boolean).join(', ')
+            : customText}
+        />
       </div>
 
       {/* Category Navigation — scrollable */}

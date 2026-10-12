@@ -25,6 +25,7 @@ import type {
   RefCodeEntry,
   StructureSection,
 } from '@/types';
+import { DEFAULT_AI_SETTINGS, type AiSettings } from '@/lib/autoCompose';
 
 // Import JSON data
 import fieldsData from '@/data/normalized/fields.json';
@@ -36,6 +37,19 @@ import groupsData from '@/data/normalized/groups.json';
 import suggestionsData from '@/data/normalized/suggestions.json';
 import refcodesData from '@/data/normalized/refcodes.json';
 import structureSectionsData from '@/data/normalized/structure_sections.json';
+
+// Aspect ratio phrasing for natural-language prompts
+const NATURAL_AR_TEXT: Record<string, string> = {
+  '1:1': 'square format',
+  '16:9': 'widescreen 16:9 format',
+  '9:16': 'vertical 9:16 format',
+  '4:3': '4:3 format',
+  '3:4': '3:4 portrait format',
+  '21:9': 'ultrawide 21:9 cinematic format',
+  '3:2': '3:2 format',
+  '2:3': '2:3 portrait format',
+};
+const naturalAspectRatioText = (ar: string) => NATURAL_AR_TEXT[ar] || `${ar} aspect ratio`;
 
 // Base reference codes from JSON (git-tracked)
 const baseRefCodes: RefCodeEntry[] = (refcodesData.refCodes || []).map((rc: any) => ({
@@ -93,7 +107,9 @@ interface PromptStudioState {
   // Structured text
   setStructuredText: (sectionId: string, text: string) => void;
   clearStructuredTexts: () => void;
-  resetStructured: () => void;  // clear tokens, custom text and structured texts (keeps MJ/SD params)
+  resetStructured: () => void;  // clear tokens, custom text, structured texts and AR (keeps MJ/SD params)
+  structuredAspectRatio: string | null;  // 자연어 탭 전용 — 직접 고른 경우에만 출력
+  setStructuredAspectRatio: (ar: string | null) => void;
 
   // Character mode
   characterMode: boolean;
@@ -123,6 +139,10 @@ interface PromptStudioState {
   clearFocusedOption: () => void;
   selectedGroupId: string | null;
   setSelectedGroupId: (groupId: string | null) => void;
+
+  // AI auto-compose (keys stay in this browser's localStorage)
+  aiSettings: AiSettings;
+  setAiSettings: (patch: Partial<AiSettings>) => void;
 
   // Presets
   presets: Preset[];
@@ -319,7 +339,9 @@ export const usePromptStore = create<PromptStudioState>()(
         }));
       },
       clearStructuredTexts: () => set({ structuredTexts: {} }),
-      resetStructured: () => set({ tokens: [], customText: '', structuredTexts: {} }),
+      resetStructured: () => set({ tokens: [], customText: '', structuredTexts: {}, structuredAspectRatio: null }),
+      structuredAspectRatio: null,
+      setStructuredAspectRatio: (ar) => set({ structuredAspectRatio: ar }),
 
       // Character mode
       setCharacterMode: (enabled) => set({ characterMode: enabled }),
@@ -363,6 +385,9 @@ export const usePromptStore = create<PromptStudioState>()(
       clearFocusedOption: () => set({ focusedOptionId: null }),
       selectedGroupId: 'subject',
       setSelectedGroupId: (groupId) => set({ selectedGroupId: groupId }),
+
+      aiSettings: DEFAULT_AI_SETTINGS,
+      setAiSettings: (patch) => set((state) => ({ aiSettings: { ...state.aiSettings, ...patch } })),
 
       // Presets
       presets: [],
@@ -723,18 +748,7 @@ export const usePromptStore = create<PromptStudioState>()(
             const naturalParts = [];
             
             if (model.capabilities.aspect_ratio && params.ar) {
-              const arMap: Record<string, string> = {
-                '1:1': 'square format',
-                '16:9': 'widescreen 16:9 format',
-                '9:16': 'vertical 9:16 format',
-                '4:3': '4:3 format',
-                '3:4': '3:4 portrait format',
-                '21:9': 'ultrawide 21:9 cinematic format',
-                '3:2': '3:2 format',
-                '2:3': '2:3 portrait format',
-              };
-              const arText = arMap[params.ar] || `${params.ar} aspect ratio`;
-              naturalParts.push(arText);
+              naturalParts.push(naturalAspectRatioText(params.ar));
             }
             
             if (model.capabilities.duration && params.duration) {
@@ -781,7 +795,8 @@ export const usePromptStore = create<PromptStudioState>()(
           .sort((a, b) => a.sort_order - b.sort_order);
         const optionMap = new Map(state.options.map((opt) => [opt.option_id, opt]));
 
-        const lines: string[] = [];
+        // Output is one flowing prompt (no [Section] labels), in section order
+        const phrases: string[] = [];
 
         for (const section of sections) {
           const parts: string[] = [];
@@ -818,12 +833,16 @@ export const usePromptStore = create<PromptStudioState>()(
             parts.push(freetext);
           }
 
-          if (parts.length > 0) {
-            lines.push(`[${section.label}] ${parts.join(', ')}`);
-          }
+          phrases.push(...parts.map((p) => p.trim().replace(/[.,]+$/, '')).filter(Boolean));
         }
 
-        return lines.join('\n');
+        if (state.structuredAspectRatio) {
+          phrases.push(naturalAspectRatioText(state.structuredAspectRatio));
+        }
+
+        if (phrases.length === 0) return '';
+        const text = phrases.join(', ');
+        return `${text.charAt(0).toUpperCase()}${text.slice(1)}.`;
       },
 
       getSelectedModel: () => {
@@ -875,6 +894,7 @@ export const usePromptStore = create<PromptStudioState>()(
       partialize: (state) => ({
         presets: state.presets,
         localRefCodes: state.localRefCodes,
+        aiSettings: state.aiSettings,
       }),
       merge: (persistedState, currentState) => {
         // Merge persisted local codes with JSON base codes
@@ -886,6 +906,7 @@ export const usePromptStore = create<PromptStudioState>()(
           ...persisted,
           localRefCodes: local,
           refCodes: [...baseRefCodes, ...local],
+          aiSettings: { ...DEFAULT_AI_SETTINGS, ...persisted?.aiSettings },
         };
       },
       migrate: (persistedState: any, version: number) => {
