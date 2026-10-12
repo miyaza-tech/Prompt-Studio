@@ -11,7 +11,7 @@ export default function TopNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
 
-  const { options, fields, groups, tokens, addToken, removeToken } = usePromptStore();
+  const { options, fields, groups, tokens, addToken, removeToken, focusOption } = usePromptStore();
 
   useEffect(() => {
     const stored = localStorage.getItem('theme');
@@ -75,6 +75,11 @@ export default function TopNavigation() {
     setIsOpen(false);
   };
 
+  const handleJumpTo = (option: typeof options[0]) => {
+    focusOption(option);
+    setIsOpen(false);
+  };
+
   const handleToggleToken = (option: typeof options[0]) => {
     const existing = tokens.find((t) => t.option_id === option.option_id);
     if (existing) {
@@ -105,6 +110,13 @@ export default function TopNavigation() {
             setIsOpen(true);
           }}
           onFocus={() => { if (searchQuery) setIsOpen(true); }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !e.nativeEvent.isComposing && searchResults.length > 0) {
+              handleJumpTo(searchResults[0]);
+            } else if (e.key === 'Escape') {
+              setIsOpen(false);
+            }
+          }}
           placeholder="전체 옵션 검색..."
           className="
             w-full pl-9 pr-8 py-1.5 rounded-lg border border-border
@@ -140,7 +152,9 @@ export default function TopNavigation() {
                   return (
                     <div
                       key={option.option_id}
-                      className="flex items-center justify-between px-3 py-2 hover:bg-muted/40 transition-colors"
+                      onClick={() => handleJumpTo(option)}
+                      className="flex items-center justify-between px-3 py-2 hover:bg-muted/40 transition-colors cursor-pointer"
+                      title="클릭하면 해당 옵션으로 이동"
                     >
                       <div className="flex-1 min-w-0 mr-2">
                         <div className="text-[11px] text-muted-foreground truncate">
@@ -156,7 +170,10 @@ export default function TopNavigation() {
                         </div>
                       </div>
                       <button
-                        onClick={() => handleToggleToken(option)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleToggleToken(option);
+                        }}
                         className={`
                           shrink-0 w-6 h-6 rounded flex items-center justify-center transition-colors
                           ${

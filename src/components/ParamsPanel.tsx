@@ -9,9 +9,9 @@ import type { Block, StructureSection } from '@/types';
 const MJ_IMAGE_IDS = ['midjourney_v8', 'midjourney', 'midjourney_v6_1', 'midjourney_v6', 'midjourney_v5_2', 'midjourney_niji_v7', 'midjourney_niji_v6', 'midjourney_niji_v5', 'midjourney_niji_v4'];
 
 const PANEL_TABS = [
-  { id: 'mj-image' as const, label: 'MJ', defaultModel: 'midjourney_v8' },
-  { id: 'stable-diffusion' as const, label: 'SD', defaultModel: 'stable_diffusion' },
   { id: 'structured' as const, label: '자연어', defaultModel: null },
+  { id: 'stable-diffusion' as const, label: 'SD', defaultModel: 'stable_diffusion' },
+  { id: 'mj-image' as const, label: 'MJ', defaultModel: 'midjourney_v8' },
 ];
 
 type PanelTabId = 'mj-image' | 'stable-diffusion' | 'structured';
@@ -36,6 +36,8 @@ export default function ParamsPanel() {
     structureSections,
     structuredTexts,
     setStructuredText,
+    resetStructured,
+    removeToken,
     tokens,
     options,
     customText,
@@ -90,14 +92,13 @@ export default function ParamsPanel() {
       <div className="flex-1 overflow-y-auto p-3">
         <div className="flex items-center justify-between mb-3">
           <span className="text-xs font-medium text-muted-foreground">파라미터</span>
-          {activeTab !== 'structured' && (
-            <button
-              onClick={resetParams}
-              className="px-2 py-1 text-[11px] border border-border rounded hover:bg-muted transition-colors"
-            >
-              초기화
-            </button>
-          )}
+          <button
+            onClick={activeTab === 'structured' ? resetStructured : resetParams}
+            className="px-2 py-1 text-[11px] border border-border rounded hover:bg-muted transition-colors"
+            title={activeTab === 'structured' ? '선택한 옵션과 입력한 내용 모두 지우기' : undefined}
+          >
+            초기화
+          </button>
         </div>
 
         {/* Midjourney 이미지 */}
@@ -293,6 +294,7 @@ export default function ParamsPanel() {
             sections={structureSections}
             structuredTexts={structuredTexts}
             setStructuredText={setStructuredText}
+            removeToken={removeToken}
             tokens={tokens}
             options={options}
             customText={customText}
@@ -388,6 +390,7 @@ interface StructuredPanelProps {
   sections: StructureSection[];
   structuredTexts: Record<string, string>;
   setStructuredText: (sectionId: string, text: string) => void;
+  removeToken: (tokenId: string) => void;
   tokens: import('@/types').PromptToken[];
   options: import('@/types').Option[];
   customText: string;
@@ -399,6 +402,7 @@ function StructuredPanel({
   sections,
   structuredTexts,
   setStructuredText,
+  removeToken,
   tokens,
   options,
   customText,
@@ -417,14 +421,14 @@ function StructuredPanel({
 
   // Collect tokens per section
   const tokensBySection = useMemo(() => {
-    const map = new Map<string, string[]>();
+    const map = new Map<string, ChipToken[]>();
     for (const section of sorted) {
       const catSet = new Set(section.category_ids);
-      const vals: string[] = [];
+      const vals: ChipToken[] = [];
       for (const t of tokens) {
         if (catSet.has(t.category_id)) {
           const opt = optionMap.get(t.option_id);
-          vals.push(opt?.label_en || opt?.value || t.value);
+          vals.push({ tokenId: t.id, label: opt?.label_en || opt?.value || t.value });
         }
       }
       map.set(section.section_id, vals);
@@ -454,6 +458,7 @@ function StructuredPanel({
             freetext={structuredTexts[section.section_id] || ''}
             onFreetextChange={(text) => setStructuredText(section.section_id, text)}
             onClearFreetext={() => setStructuredText(section.section_id, '')}
+            onRemoveToken={removeToken}
           />
         );
       })}
@@ -461,13 +466,19 @@ function StructuredPanel({
   );
 }
 
+interface ChipToken {
+  tokenId: string;
+  label: string;
+}
+
 interface StructuredSectionRowProps {
   section: StructureSection;
-  chipTokens: string[];
+  chipTokens: ChipToken[];
   subjectText: string;
   freetext: string;
   onFreetextChange: (text: string) => void;
   onClearFreetext: () => void;
+  onRemoveToken: (tokenId: string) => void;
 }
 
 function StructuredSectionRow({
@@ -477,6 +488,7 @@ function StructuredSectionRow({
   freetext,
   onFreetextChange,
   onClearFreetext,
+  onRemoveToken,
 }: StructuredSectionRowProps) {
   const hasChips = chipTokens.length > 0 || subjectText;
 
@@ -497,12 +509,19 @@ function StructuredSectionRow({
               {subjectText.length > 30 ? subjectText.slice(0, 30) + '...' : subjectText}
             </span>
           )}
-          {chipTokens.map((val, i) => (
+          {chipTokens.map((chip) => (
             <span
-              key={i}
-              className="inline-flex items-center px-1.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] border border-primary/20"
+              key={chip.tokenId}
+              className="inline-flex items-center gap-0.5 pl-1.5 pr-0.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] border border-primary/20"
             >
-              {val}
+              {chip.label}
+              <button
+                onClick={() => onRemoveToken(chip.tokenId)}
+                className="p-0.5 rounded hover:bg-primary/20 hover:text-red-500 transition-colors"
+                title="삭제"
+              >
+                <X className="w-2.5 h-2.5" />
+              </button>
             </span>
           ))}
         </div>

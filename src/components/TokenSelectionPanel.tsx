@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, useCallback } from 'react';
+import { useMemo, useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import { usePromptStore } from '@/store/promptStore';
 import { Sparkles, X as XIcon } from 'lucide-react';
@@ -28,7 +28,12 @@ export default function TokenSelectionPanel() {
     selectedCategoryId,
     getSuggestions,
     dismissSuggestion,
+    focusedOptionId,
+    clearFocusedOption,
   } = usePromptStore();
+
+  // Option highlighted after jumping from global search
+  const [highlightedOptionId, setHighlightedOptionId] = useState<string | null>(null);
 
   // Hover state for image preview
   const [hoveredOption, setHoveredOption] = useState<Option | null>(null);
@@ -111,6 +116,25 @@ export default function TokenSelectionPanel() {
 
     return result;
   }, [currentField, categoryGroups, options]);
+
+  // Scroll to the option chosen in global search once its category has rendered
+  useEffect(() => {
+    if (!focusedOptionId) return;
+    const frame = requestAnimationFrame(() => {
+      const el = document.querySelector<HTMLElement>(`[data-option-id="${CSS.escape(focusedOptionId)}"]`);
+      if (!el) return;
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setHighlightedOptionId(focusedOptionId);
+      clearFocusedOption();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [focusedOptionId, groupedOptions, clearFocusedOption]);
+
+  useEffect(() => {
+    if (!highlightedOptionId) return;
+    const timer = setTimeout(() => setHighlightedOptionId(null), 2000);
+    return () => clearTimeout(timer);
+  }, [highlightedOptionId]);
 
   const handleOptionClick = (option: Option) => {
     const isSelected = tokens.some((t) => t.option_id === option.option_id);
@@ -317,7 +341,7 @@ export default function TokenSelectionPanel() {
                     const hasImage = !!option.image_url;
 
                     return (
-                      <div key={option.option_id} className="flex items-start gap-2">
+                      <div key={option.option_id} data-option-id={option.option_id} className="flex items-start gap-2">
                         <button
                           onClick={() => handleOptionClick(option)}
                           onMouseEnter={(e) => handleMouseEnter(e, option)}
@@ -325,6 +349,7 @@ export default function TokenSelectionPanel() {
                           title={option.description || undefined}
                           className={`
                             shrink-0 px-3 py-1.5 rounded text-sm border transition-all
+                            ${highlightedOptionId === option.option_id ? 'ring-2 ring-primary ring-offset-2 ring-offset-background' : ''}
                             ${isSelected
                               ? 'bg-gray-400 border-gray-400 text-white dark:bg-[#d4d4d4] dark:border-[#d4d4d4] dark:text-[#1e1e1e]'
                               : 'bg-white border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-300 dark:bg-[#2d2d30]/50 dark:border-[#2d2d30] dark:text-[#d4d4d4] dark:hover:bg-[#3c3c3c]/50'

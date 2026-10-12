@@ -93,6 +93,7 @@ interface PromptStudioState {
   // Structured text
   setStructuredText: (sectionId: string, text: string) => void;
   clearStructuredTexts: () => void;
+  resetStructured: () => void;  // clear tokens, custom text and structured texts (keeps MJ/SD params)
 
   // Character mode
   characterMode: boolean;
@@ -117,6 +118,9 @@ interface PromptStudioState {
   toggleCategory: (categoryId: string) => void;
   selectedCategoryId: string | null;
   setSelectedCategoryId: (categoryId: string | null) => void;
+  focusedOptionId: string | null;              // option to scroll to (from global search)
+  focusOption: (option: Option) => void;
+  clearFocusedOption: () => void;
   selectedGroupId: string | null;
   setSelectedGroupId: (groupId: string | null) => void;
 
@@ -190,7 +194,7 @@ export const usePromptStore = create<PromptStudioState>()(
       selectedModelId: 'midjourney_v8',
       setSelectedModelId: (id) => set({ selectedModelId: id }),
 
-      paramsActiveTab: 'mj-image',
+      paramsActiveTab: 'structured',
       setParamsActiveTab: (tab) => set({ paramsActiveTab: tab }),
 
       // Data from JSON
@@ -315,6 +319,7 @@ export const usePromptStore = create<PromptStudioState>()(
         }));
       },
       clearStructuredTexts: () => set({ structuredTexts: {} }),
+      resetStructured: () => set({ tokens: [], customText: '', structuredTexts: {} }),
 
       // Character mode
       setCharacterMode: (enabled) => set({ characterMode: enabled }),
@@ -353,6 +358,9 @@ export const usePromptStore = create<PromptStudioState>()(
       },
       selectedCategoryId: null,
       setSelectedCategoryId: (categoryId) => set({ selectedCategoryId: categoryId }),
+      focusedOptionId: null,
+      focusOption: (option) => set({ selectedCategoryId: option.category_id, focusedOptionId: option.option_id }),
+      clearFocusedOption: () => set({ focusedOptionId: null }),
       selectedGroupId: 'subject',
       setSelectedGroupId: (groupId) => set({ selectedGroupId: groupId }),
 

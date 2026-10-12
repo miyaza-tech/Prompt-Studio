@@ -29,3 +29,6 @@ Thumbs.db
 .venv/
 __pycache__/
 *.pyc
+
+# TypeScript
+*.tsbuildinfo
