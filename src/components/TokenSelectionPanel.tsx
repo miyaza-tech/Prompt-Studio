@@ -6,6 +6,10 @@ import { usePromptStore } from '@/store/promptStore';
 import { Sparkles, X as XIcon } from 'lucide-react';
 import type { Option, Group } from '@/types';
 
+// Local images (public/) need the base path prefix on static deploys
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const resolveImageUrl = (url: string) => (url.startsWith('/') ? BASE_PATH + url : url);
+
 /**
  * TokenSelectionPanel — 가운데 토큰 선택 패널
  *
@@ -162,7 +166,7 @@ export default function TokenSelectionPanel() {
         >
           <div className="rounded-lg shadow-lg overflow-hidden bg-black" style={{ width: '140px', height: '140px', position: 'relative' }}>
             <Image
-              src={hoveredOption.image_url}
+              src={resolveImageUrl(hoveredOption.image_url)}
               alt={hoveredOption.label_en || hoveredOption.value}
               fill
               className="object-cover"

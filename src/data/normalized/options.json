@@ -817,7 +817,7 @@
       "sort_order": 5,
       "default_generated": false,
       "media_type": "all",
-      "image_url": "https://www.goodnet.org/photos/620x0/42119_hd.jpg",
+      "image_url": "/images/options/natural_light.webp",
       "token_key": "natural_light"
     },
     {
@@ -1057,7 +1057,7 @@
       "sort_order": 5,
       "default_generated": false,
       "media_type": "video",
-      "image_url": "https://blog.kakaocdn.net/dna/c8ivFO/btqUuMA0d8m/AAAAAAAAAAAAAAAAAAAAAM8RMGgb-n3qvpfgxmNV-7dOLBugdpiMcX6r5_mWifCD/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=kD0nWm5eebJR7%2Fh9rmQa18Ks1Lw%3D",
+      "image_url": "/images/options/tilt_up.webp",
       "token_key": "tilt_up"
     },
     {
@@ -1417,7 +1417,7 @@
       "sort_order": 6,
       "default_generated": false,
       "media_type": "video",
-      "image_url": "https://blog.kakaocdn.net/dna/8mE18/btqUsdzhY9u/AAAAAAAAAAAAAAAAAAAAANHCO0IjkzH7DPdrOHVo5fWjsBlBKYTBu0YfhRfiDZjk/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=T80oCM7q9FIjGOvIgLY9eTFE0zQ%3D",
+      "image_url": "/images/options/tilt_down.webp",
       "token_key": "tilt_down"
     },
     {
@@ -2017,7 +2017,7 @@
       "sort_order": 8,
       "default_generated": false,
       "media_type": "all",
-      "image_url": "https://www.adobe.com/uk/creativecloud/photography/discover/media_149acfad3c4df14fe68be2709c73017e06dde05f6.jpg?format=pjpg&optimize=medium&width=1200",
+      "image_url": "/images/options/negative_space.webp",
       "token_key": "negative_space"
     },
     {
@@ -2037,7 +2037,7 @@
       "sort_order": 8,
       "default_generated": false,
       "media_type": "all",
-      "image_url": "https://shot.cafe/images/t/the-virgin-suicides-1999-207-7810.jpg",
+      "image_url": "/images/options/vanishing_point.webp",
       "token_key": "vanishing_point"
     },
     {
@@ -2097,7 +2097,7 @@
       "sort_order": 8,
       "default_generated": false,
       "media_type": "video",
-      "image_url": "https://blog.kakaocdn.net/dna/zSzJG/btqUtp7gcho/AAAAAAAAAAAAAAAAAAAAAPh3g2D_eYGF8Vtfx4hVAjIeqJ65HnUjrmbz0j-yTHf8/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=s4Lt%2FbZhC2z1HKixk5bK8OXn7A0%3D",
+      "image_url": "/images/options/zoom_in.webp",
       "token_key": "zoom_in"
     },
     {
@@ -2777,7 +2777,7 @@
       "sort_order": 10,
       "default_generated": false,
       "media_type": "video",
-      "image_url": "https://blog.kakaocdn.net/dna/DPTx4/btqUvDcKcrS/AAAAAAAAAAAAAAAAAAAAAKRFBD8fRXbJNQQdb0jSumfTTPoEAszDLxBrVQqUQu3r/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=fWhGo64K1Y36e%2B%2BmMfJnuYOm2ZY%3D",
+      "image_url": "/images/options/stationary_camera.webp",
       "token_key": "stationary_camera"
     },
     {
@@ -3237,7 +3237,7 @@
       "sort_order": 12,
       "default_generated": false,
       "media_type": "all",
-      "image_url": "https://www.adobe.com/in/creativecloud/video/discover/media_1d54256a43c786c48d0f5ac13eb0d18525fce5b13.jpg?format=jpg&optimize=medium&width=750",
+      "image_url": "/images/options/key_lighting.webp",
       "token_key": "key_lighting"
     },
     {
@@ -3737,7 +3737,7 @@
       "sort_order": 13,
       "default_generated": false,
       "media_type": "video",
-      "image_url": "https://blog.kakaocdn.net/dna/WtGsV/btqUvCY89bW/AAAAAAAAAAAAAAAAAAAAAF1lVBCUIWkEp1NeZt-XNQCBXMEaCR88JCqv7b0LZka7/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=dDHDhAKIxS0mRSwFw%2FzoWWxbfW8%3D",
+      "image_url": "/images/options/dolly_out.webp",
       "token_key": "dolly_out"
     },
     {
@@ -3857,7 +3857,7 @@
       "sort_order": 14,
       "default_generated": false,
       "media_type": "all",
-      "image_url": "https://www.adobe.com/creativecloud/photography/technique/media_11419c924a1ca3e44404af2ce02d0a2ef8faceb85.png?format=png&optimize=medium&width=750",
+      "image_url": "/images/options/diffused_light.webp",
       "token_key": "diffused_light"
     },
     {
@@ -4217,7 +4217,7 @@
       "sort_order": 15,
       "default_generated": false,
       "media_type": "video",
-      "image_url": "https://blog.kakaocdn.net/dna/mHfgY/btqUuOes3YE/AAAAAAAAAAAAAAAAAAAAACO2AbZoLEcHoIduQFcLJyfKZ5dzRAcEYPxsPvH3wnqE/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1772290799&allow_ip=&allow_referer=&signature=e30qMB2VctoIZxZPk%2BOpK%2BVXMew%3D",
+      "image_url": "/images/options/tracking_shot.webp",
       "token_key": "tracking_shot"
     },
     {
@@ -5017,7 +5017,7 @@
       "sort_order": 19,
       "default_generated": false,
       "media_type": "all",
-      "image_url": "https://www.ppa.com/assets/images/ppmag_articles/202310-14-PP-broad-E23A8256_retouched_highres.jpg",
+      "image_url": "/images/options/broad_lighting.webp",
       "token_key": "broad_lighting"
     },
     {
@@ -9217,7 +9217,7 @@
       "sort_order": 64,
       "default_generated": false,
       "media_type": "all",
-      "image_url": "https://artlist.io/blog/wp-content/uploads/2022/01/54e16e401a86b365a0724f5317621a4f6d3bccbf.jpg",
+      "image_url": "/images/options/bounced_light.webp",
       "token_key": "bounced_light"
     },
     {
