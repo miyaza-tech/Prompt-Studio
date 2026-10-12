@@ -110,6 +110,8 @@ interface PromptStudioState {
   resetStructured: () => void;  // clear tokens, custom text, structured texts and AR (keeps MJ/SD params)
   structuredAspectRatio: string | null;  // 자연어 탭 전용 — 직접 고른 경우에만 출력
   setStructuredAspectRatio: (ar: string | null) => void;
+  structuredOutputMode: 'sentence' | 'labeled';  // 문장형 한 줄 / [항목]별 줄바꿈
+  setStructuredOutputMode: (mode: 'sentence' | 'labeled') => void;
 
   // Character mode
   characterMode: boolean;
@@ -342,6 +344,8 @@ export const usePromptStore = create<PromptStudioState>()(
       resetStructured: () => set({ tokens: [], customText: '', structuredTexts: {}, structuredAspectRatio: null }),
       structuredAspectRatio: null,
       setStructuredAspectRatio: (ar) => set({ structuredAspectRatio: ar }),
+      structuredOutputMode: 'sentence',
+      setStructuredOutputMode: (mode) => set({ structuredOutputMode: mode }),
 
       // Character mode
       setCharacterMode: (enabled) => set({ characterMode: enabled }),
@@ -795,8 +799,9 @@ export const usePromptStore = create<PromptStudioState>()(
           .sort((a, b) => a.sort_order - b.sort_order);
         const optionMap = new Map(state.options.map((opt) => [opt.option_id, opt]));
 
-        // Output is one flowing prompt (no [Section] labels), in section order
+        // 'sentence': one flowing line; 'labeled': one "[Section] ..." line per section
         const phrases: string[] = [];
+        const labeledLines: string[] = [];
 
         for (const section of sections) {
           const parts: string[] = [];
@@ -833,13 +838,18 @@ export const usePromptStore = create<PromptStudioState>()(
             parts.push(freetext);
           }
 
-          phrases.push(...parts.map((p) => p.trim().replace(/[.,]+$/, '')).filter(Boolean));
+          const cleaned = parts.map((p) => p.trim().replace(/[.,]+$/, '')).filter(Boolean);
+          phrases.push(...cleaned);
+          if (cleaned.length > 0) labeledLines.push(`[${section.label}] ${cleaned.join(', ')}`);
         }
 
         if (state.structuredAspectRatio) {
-          phrases.push(naturalAspectRatioText(state.structuredAspectRatio));
+          const arText = naturalAspectRatioText(state.structuredAspectRatio);
+          phrases.push(arText);
+          labeledLines.push(`[Aspect Ratio] ${arText}`);
         }
 
+        if (state.structuredOutputMode === 'labeled') return labeledLines.join('\n');
         if (phrases.length === 0) return '';
         const text = phrases.join(', ');
         return `${text.charAt(0).toUpperCase()}${text.slice(1)}.`;
@@ -895,6 +905,7 @@ export const usePromptStore = create<PromptStudioState>()(
         presets: state.presets,
         localRefCodes: state.localRefCodes,
         aiSettings: state.aiSettings,
+        structuredOutputMode: state.structuredOutputMode,
       }),
       merge: (persistedState, currentState) => {
         // Merge persisted local codes with JSON base codes

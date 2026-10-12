@@ -48,6 +48,8 @@ export default function PromptOutputBar() {
   const [dropdownPos, setDropdownPos] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
 
   const isStructuredTab = usePromptStore((s) => s.paramsActiveTab === 'structured');
+  const structuredOutputMode = usePromptStore((s) => s.structuredOutputMode);
+  const setStructuredOutputMode = usePromptStore((s) => s.setStructuredOutputMode);
   const generatedPrompt = isStructuredTab ? getStructuredPromptText() : getFullPromptText();
 
   // 토큰/파라미터가 바뀌면 수정 내용을 자동으로 업데이트 — 단, 사용자가 직접 수정 중이면 유지
@@ -176,6 +178,27 @@ export default function PromptOutputBar() {
       {/* Top row: label + actions */}
       <div className="flex items-center gap-2 mb-2">
         <span className="text-xs font-medium text-muted-foreground">프롬프트 출력</span>
+        {isStructuredTab && (
+          <div className="flex" role="group" aria-label="출력 형식">
+            {([
+              { mode: 'sentence', label: '문장', title: '한 줄 문장으로 출력' },
+              { mode: 'labeled', label: '항목별', title: '[Style], [Subject] 등 항목 이름과 함께 줄별로 출력' },
+            ] as const).map(({ mode, label, title }, i) => (
+              <button
+                key={mode}
+                onClick={() => setStructuredOutputMode(mode)}
+                title={title}
+                className={`px-2 py-0.5 text-[10px] font-medium border transition-colors
+                  ${i === 0 ? 'rounded-l' : 'rounded-r -ml-px'}
+                  ${structuredOutputMode === mode
+                    ? 'bg-primary/20 border-primary text-primary relative z-10'
+                    : 'bg-background border-border text-muted-foreground hover:bg-muted'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
         {isEdited && (
           <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-500 border border-amber-500/30">
             수정됨
