@@ -4,6 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Prompt Studio',
   description: 'Professional prompt builder for AI image and video generation',
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
